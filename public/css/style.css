@@ -1,0 +1,7 @@
+tr.even {
+    background-color: rgb(203 213 225);
+}
+
+table.dataTable tbody tr {
+    all: unset;
+}
