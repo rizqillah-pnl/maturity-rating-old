@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2023-{{ date('Y') }} <a href="{{ url('/') }}">SISURAT</a> & <a
+    <strong>Copyright &copy; 2023-{{ date('Y') }} <a href="{{ url('/') }}">SPI PNL</a> & <a
             href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">

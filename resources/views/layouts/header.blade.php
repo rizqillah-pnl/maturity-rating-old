@@ -1,31 +1,53 @@
- <!-- ======= Header ======= -->
- <header id="header" class="header fixed-top" data-scrollto-offset="0">
-     <div class="container-fluid d-flex align-items-center justify-content-between">
+ <!-- Navbar -->
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+     <!-- Left navbar links -->
+     <ul class="navbar-nav">
+         <li class="nav-item">
+             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+         </li>
+         <li class="nav-item d-none d-sm-inline-block">
+             <a href="{{ url('dashboard') }}" class="nav-link">Home</a>
+         </li>
+     </ul>
 
-         <a href="{{ url('/') }}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-             <!-- Uncomment the line below if you also wish to use an image logo -->
-             <img src="{{ asset('logo.ico') }}" alt="">
-             <h1 class="mb-0">SISURAT | BPS</h1>
-         </a>
+     <!-- Right navbar links -->
+     <ul class="navbar-nav ml-auto">
+         <!-- Navbar Search -->
+         {{-- <li class="nav-item">
+             <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                 <i class="fas fa-search"></i>
+             </a>
+             <div class="navbar-search-block">
+                 <form class="form-inline">
+                     <div class="input-group input-group-sm">
+                         <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                             aria-label="Search">
+                         <div class="input-group-append">
+                             <button class="btn btn-navbar" type="submit">
+                                 <i class="fas fa-search"></i>
+                             </button>
+                             <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                 <i class="fas fa-times"></i>
+                             </button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+         </li> --}}
 
-         <nav id="navbar" class="navbar">
-             <ul>
-                 <li><a class="nav-link scrollto" href="#hero-animated">Home</a></li>
-                 <li><a class="nav-link scrollto" href="#featured-services">Features</a></li>
-                 <li><a class="nav-link scrollto" href="#about">About</a></li>
-                 <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                 <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-                 <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-             </ul>
-             <i class="bi bi-list mobile-nav-toggle d-none"></i>
-         </nav><!-- .navbar -->
-
-         @auth
-             <a class="btn-getstarted scrollto" href="{{ url('/dashboard') }}">Dashboard</a>
-         @else
-             <a class="btn-getstarted scrollto" href="{{ url('/login') }}">Sign In</a>
-         @endauth
-
-     </div>
- </header><!-- End Header -->
+         <li class="nav-item">
+             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                 <i class="fas fa-expand-arrows-alt"></i>
+             </a>
+         </li>
+         <form action="{{ route('logout') }}" method="post" style="d-inline">
+             @csrf
+             <li class="nav-item">
+                 <button class="btn btn-danger" type="submit"
+                     onclick="return confirm('Anda yakin untuk logout!')">Logout <i
+                         class="bi bi-box-arrow-right"></i></button>
+             </li>
+         </form>
+     </ul>
+ </nav>
+ <!-- /.navbar -->
